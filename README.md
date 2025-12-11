@@ -3,7 +3,7 @@ DietSphere – AI-Powered Personalized Diet Recommendation System
 DietSphere is a smart nutrition assistant that creates personalized diet plans tailored to an individual’s body metrics, goals, dietary restrictions, and food preferences.
 It blends nutrition science, AI/ML models, rule-based logic, and NLP to deliver precise and dynamic diet recommendations.
 
-#Table of Contents
+# Table of Contents
 1. About the Project
 2. Key Features
 3. System Architecture
@@ -14,20 +14,20 @@ It blends nutrition science, AI/ML models, rule-based logic, and NLP to deliver 
 8. API Endpoints
 9. ML/NLP Models Used
 10. Data Cleaning 81 Normalization
-1 1. Restrictions 8L Substitutions Logic
+11. Restrictions 8L Substitutions Logic
 12. Tracking User Adherence
 13. Feedback Loop Mechanism
 14. Future Scope
 15. Contributors
 
 
-#1. About the Project
+## 1. About the Project
 
 DietSphere aims to simplify healthy eating by generating fully customized meal plans based on user inputs such as height, weight, age, gender, lifestyle, and health goals.
 It adapts to user feedback, tracks adherence, understands natural language queries, and supports Indian + Ayurvedic food systems.
 
 
-#2. Key Features
+## 2. Key Features
 
 Personalized daily/weekly diet plans
 BMR, TDEE & BMI calculation
@@ -40,7 +40,7 @@ Tracks user adherence to assigned meals
 Feedback loop for improving future diet plans
 Fully containerized deployment with Docker
 
-#3. System Architecture
+## 3. System Architecture
 Frontend (Flask)
         |
 Backend API (Flask / FastAPI)
@@ -51,7 +51,7 @@ Nutrition Database (MySQL)
         |
 External Nutrition APIs
 
-#4. How DietSphere Works
+## 4. How DietSphere Works
 
 User provides personal details & goals.
 System cleans and normalizes data.
@@ -63,7 +63,7 @@ Portions are calculated to match calorie & macro targets.
 NLP identifies user intents for custom requests.
 User adherence logs refine future recommendations.
 
-#5. Tech Stack
+## 5. Tech Stack
 Frontend:
 React, Tailwind/Material UI
 Backend:
@@ -79,7 +79,7 @@ Docker, Docker Compose
 APIs:
 Free food nutrition APIs (CalorieNinjas / Edamam free tier)
 
-#6. Project Structure
+## 6. Project Structure
 DietSphere/
 │── backend/
 │   ├── app.py
@@ -102,22 +102,22 @@ DietSphere/
 │── docker-compose.yml
 │── README.md
 
-#7. Installation & Setup
+## 7. Installation & Setup
 
-##Backend Setup
+### Backend Setup
 cd backend
 pip install -r requirements.txt
 python app.py
 
-##Frontend Setup
+### Frontend Setup
 cd frontend
 npm install
 npm start
 
-##Docker Setup
+### Docker Setup
 docker-compose up --build
 
-#8. API Endpoints
+## 8. API Endpoints
 
 | Method | Endpoint       | Description                     |
 | ------ | -------------- | ------------------------------- |
@@ -130,7 +130,7 @@ docker-compose up --build
 
 
 
-#9. ML/NLP Models Used
+## 9. ML/NLP Models Used
 
 Simple text classification model for query understanding
 Keyword extraction for restrictions & preferences
@@ -138,7 +138,7 @@ Rule-based engine for diet generation
 (Optional) Recommendation model using similarity scoring for foods
 
 
-#10. Data Cleaning & Normalization
+## 10. Data Cleaning & Normalization
 
 Remove invalid entries (negative weight/height)
 Convert units to metric system
@@ -147,7 +147,7 @@ Handle missing values via median imputation
 Normalize features using MinMax or Z-score if ML is used
 
 
-#11. Restrictions & Substitution Logic
+## 11. Restrictions & Substitution Logic
 
 Gluten → replaced with millet/rice options
 Sugar-free → replaces sugary items with low GI alternatives
@@ -155,14 +155,14 @@ Low-carb → reduces grains & boosts proteins/fats
 Dairy-free → substitutes milk/curd with lactose-free or soy options
 Vegan → removes all animal-based items
 
-#12. Tracking User Adherence
+## 12. Tracking User Adherence
 
 Users mark meals as eaten or skipped
 Logs are stored in the database
 Adherence % is calculated daily/weekly
 Future plans adapt based on adherence behavior
 
-#13. Feedback Loop Mechanism
+## 13. Feedback Loop Mechanism
 
 User feedback collected after each plan
 System learns likes/dislikes
@@ -170,7 +170,7 @@ Diet plan improves using preference patterns
 Food suggestions become more personalized over time
 
 
-#14. Future Scope
+## 14. Future Scope
 
 Workout recommendations
 Wearable/health tracker integration
@@ -179,10 +179,12 @@ Weekly grocery planner
 Advanced food recommendation ML models
 
 
-#15. Contributors
+## 15. Contributors
 
-Pratik Shende
-Shivam Mantri
+Pratik Shende |
+
+Shivam Mantri  |
+
 Sudhanshu Misra
 
 
