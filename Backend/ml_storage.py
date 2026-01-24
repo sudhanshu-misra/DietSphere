@@ -1,7 +1,4 @@
-# backend/ml_storage.py
-
-from db import get_connection
-
+from backend.db import get_connection
 
 def save_food_ml_features(food: dict):
     conn = None

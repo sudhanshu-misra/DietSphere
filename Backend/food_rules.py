@@ -1,5 +1,5 @@
-from ml_recommender import recommend_foods_ml, build_user_vector
-from food_data import FOOD_DB
+from backend.food_data import FOOD_DB
+from backend.ml_recommender import recommend_foods_ml, build_user_vector
 
 def filter_foods(prefs, restr):
     return FOOD_DB
