@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Daily Diet Plan</h3>
+<pre>{{ result }}</pre>
+
+<form method="post" action="/generate-weekly">
+    {% for k,v in request.form.items() %}
+    <input type="hidden" name="{{k}}" value="{{v}}">
+    {% endfor %}
+    <button type="submit">Generate Weekly Plan</button>
+</form>
+{% endblock %}
