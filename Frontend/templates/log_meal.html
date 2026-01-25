@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="utf-8", name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietSphere - Log Meal</title>
+</head>
+
+<body>
+
+    <h2>Log Meal</h2>
+
+    <form method="post">
+    <label>
+
+        User ID:
+        
+        <input name="user_id" required><br><br>
+
+        Date (YYYY-MM-DD):
+        <input name="date" required><br><br>
+
+        Meal Type:
+        <select name="meal_type">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snacks">Snacks</option>
+        </select><br><br>
+
+        Food Name:
+        <input name="food" required><br><br>
+
+        Portion Eaten (grams):
+        <input name="portion_eaten_g" required><br><br>
+
+        Recommended Portion (grams):
+        <input name="recommended_portion_g" required><br><br>
+
+        <button type="submit">Log Meal</button>
+    </label>
+    </form>
+
+    {% if result %}
+    <h3>Result</h3>
+    <pre>{{ result }}</pre>
+    {% endif %}
+
+    <br>
+    <a href="/">Back to Home</a>
+
+</body>
+
+</html>

@@ -1,6 +1,77 @@
-{% extends "base.html" %}
-{% block content %}
-<a href="/diet-form">Generate Diet Plan</a>
-<br>
-<a href="/adherence">View Adherence</a>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="utf-8", name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietSphere</title>
+</head>
+
+<body>
+
+    <h1>DietSphere</h1>
+
+    <h2>Generate Daily Diet Plan</h2>
+
+    <form method="post">
+    <label>
+        Age:
+        <input name="age" required><br><br>
+
+        Gender:
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+
+        Height (cm):
+        <input name="height_cm" required><br><br>
+
+        Weight (kg):
+        <input name="weight_kg" required><br><br>
+
+        Activity Level:
+        <select name="activity_level">
+            <option value="sedentary">Sedentary</option>
+            <option value="light">Light</option>
+            <option value="moderate">Moderate</option>
+            <option value="active">Active</option>
+        </select><br><br>
+
+        Goal:
+        <select name="goal">
+            <option value="maintain">Maintain</option>
+            <option value="weight_loss">Weight Loss</option>
+            <option value="weight_gain">Weight Gain</option>
+        </select><br><br>
+
+        Preferences:
+        <input name="preferences" placeholder="vegetarian"><br><br>
+
+        Restrictions:
+        <input name="restrictions" placeholder="gluten_free,dairy_free"><br><br>
+
+        <button type="submit">Generate Daily Plan</button>
+    </label>
+    </form>
+
+    {% if result %}
+    <h3>Daily Diet Result</h3>
+    <pre>{{ result }}</pre>
+
+    <form action="/weekly-plan" method="post">
+        {% for k, v in form_data.items() %}
+        <input type="hidden" name="{{k}}" value="{{v}}">
+        {% endfor %}
+        <button type="submit">Generate Weekly Plan</button>
+    </form>
+    {% endif %}
+
+    <hr>
+    <a href="/diet-form">Generate Diet Plan</a>
+    <br>
+    <a href="/log-meal">Log a Meal</a>
+    <br>
+    <a href="/adherence">View Adherence</a>
+
+</body>
+
+</html>

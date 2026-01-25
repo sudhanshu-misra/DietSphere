@@ -1,8 +1,12 @@
 from flask import Flask, request, jsonify
-from logic import calculate_bmr, calculate_tdee, adjust_calories
-from food_rules import filter_foods, recommend_meals_ml
+from backend.logic import calculate_bmr, calculate_tdee, adjust_calories
+from backend.food_rules import filter_foods, recommend_meals_ml
 
 app = Flask(__name__)
+
+@app.route("/")
+def api_home():
+    return {"status": "DietSphere API running"}
 
 @app.route("/diet-plan", methods=["POST"])
 def diet_plan():
