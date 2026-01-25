@@ -159,14 +159,15 @@ DietSphere/
 
 ### Step 1: Start MySQL
 
-```cmd
+---cmd
+
 net start MySQL80
 
 ---
 
 ### Step 2: Create Databases & Tables
 
-```mysql
+---mysql
 
 CREATE DATABASE dietsphere;
 USE dietsphere;
@@ -199,7 +200,7 @@ CREATE TABLE adherence_logs (
 
 ### Step 3: Install Python packages
 
-```cmd
+---cmd
 
 pip install flask requests pandas numpy scikit-learn mysql-connector-python
 
@@ -207,7 +208,7 @@ pip install flask requests pandas numpy scikit-learn mysql-connector-python
 
 ### Step 4: Load Kaggle dataset into MySQL
 
-```cmd
+---cmd
 
 python -m backend.populate_ml_features
 
@@ -215,7 +216,7 @@ python -m backend.populate_ml_features
 
 ### Step 5: Runs Backend API
 
-```cmd
+---cmd
 
 python -m backend.app
 
@@ -223,7 +224,7 @@ python -m backend.app
 
 Runs on:
 
-```cmd
+---cmd
 
 http://127.0.0.1:5000
 
@@ -231,7 +232,7 @@ http://127.0.0.1:5000
 
 ### Step 6: Start Frontend
 
-```cmd
+---cmd
 
 cd frontend
 python app.py
@@ -240,7 +241,7 @@ python app.py
 
 Runs on:
 
-```cmd
+---cmd
 
 http://127.0.0.1:8000
 
