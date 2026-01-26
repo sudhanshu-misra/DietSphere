@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="utf-8", name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietSphere - User Adherence</title>
+</head>
+<body>
+
+    <h2>User Adherence Dashboard</h2>
+
+    <form method="post">
+        User ID:
+        <label><input name="user_id" required>
+
+            
+        <button type="submit">View Adherence</button></label>
+    </form>
+
+    {% if result %}
+    <h3>Adherence Result</h3>
+    <pre>{{ result }}</pre>
+    {% endif %}
+
+    <br>
+    <a href="/">Back to Home</a>
+
+</body>
+
+</html>
