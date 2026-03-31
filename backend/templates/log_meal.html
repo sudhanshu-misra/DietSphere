@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Log Meal</h3>
+
+<form method="post">
+    <label>
+    <input name="user_id">
+    <input name="food">
+    <input name="portion_eaten_g">
+    <input name="recommended_portion_g">
+    <button type="button">Submit</button>
+    </label>
+</form>
+
+{% if result %}
+<pre>{{ result }}</pre>
+{% endif %}
+
+{% endblock %}

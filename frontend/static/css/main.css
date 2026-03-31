@@ -1,0 +1,33 @@
+body {
+    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+    font-family: "Segoe UI", sans-serif;
+}
+
+.card {
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #4e54c8, #8f94fb);
+    border: none;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.section-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}

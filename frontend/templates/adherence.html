@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Adherence</h3>
+
+<form method="post">
+    <label>
+    <input name="user_id">
+    <button type="button">Check</button>
+    </label>
+</form>
+<canvas id="adherenceChart"></canvas>
+
+<script>
+    fetch("/api/adherence-data?user_id={{user_id}}")
+        .then(r => r.json())
+        .then(data => renderChart(data));
+</script>
+
+{% if result %}
+<pre>{{ result }}</pre>
+{% endif %}
+
+{% endblock %}
